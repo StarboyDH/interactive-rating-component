@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script defer src="script.js"></script>
+
+    <!-- Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+    </style>
+
+    <title>Interactive rating component</title>
+  </head>
+  <body>
+    <form class="main-container" method="POST" action="/thank-you">
+      <div class="icon-star-container">
+        <img class="icon-star" src="./images/icon-star.svg" />
+      </div>
+      <h1 class="rating-question">How did we do?</h1>
+      <p class="rating-describe">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="rating-options-container">
+        <input class="ratingTxt" name="rating" type="text" value="0" />
+        <input
+          class="rating-option-btn rating-option-1"
+          type="button"
+          value="1"
+          onclick="getOptionNumber(this.getAttribute('class'))"
+        />
+        <input
+          class="rating-option-btn rating-option-2"
+          type="button"
+          value="2"
+          onclick="getOptionNumber(this.getAttribute('class'))"
+        />
+        <input
+          class="rating-option-btn rating-option-3"
+          type="button"
+          value="3"
+          onclick="getOptionNumber(this.getAttribute('class'))"
+        />
+        <input
+          class="rating-option-btn rating-option-4"
+          type="button"
+          value="4"
+          onclick="getOptionNumber(this.getAttribute('class'))"
+        />
+        <input
+          class="rating-option-btn rating-option-5"
+          type="button"
+          value="5"
+          onclick="getOptionNumber(this.getAttribute('class'))"
+        />
+      </div>
+      <button class="submit-btn" type="submit" disabled>Submit</button>
+    </form>
+    <script src="./server.js"></script>
+  </body>
+</html>

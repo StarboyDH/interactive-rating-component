@@ -1,0 +1,140 @@
+:root {
+  /* fonts */
+  --main-font: "Overpass", sans-serif; /* weights: 400, 700 */
+
+  /* backgrounds colors */
+  --form-color: #212832;
+  --primer-color: #fc7613;
+  --secondary-color: #24303c;
+
+  /* fonts colors */
+  --primer-font-color: #fdfdff;
+  --secondary-font-color: #9097a1;
+}
+
+::selection {
+  color: var(--primer-font-color);
+  background-color: var(--primer-color);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141519;
+}
+
+form {
+  width: 90%;
+  padding: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--main-font);
+  background-color: var(--form-color);
+  border-radius: 14px;
+}
+
+.icon-star-container {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.rating-question {
+  margin-bottom: 0.4rem;
+  font-size: 1.5em;
+  color: var(--primer-font-color);
+}
+
+.rating-describe {
+  font-size: 15px;
+  color: var(--secondary-font-color);
+}
+
+.rating-options-container {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ratingTxt {
+  display: none;
+}
+
+.rating-option-btn {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--secondary-font-color);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.rating-option-btn:focus {
+  color: var(--primer-font-color);
+  background-color: var(--primer-color);
+}
+
+.submit-btn {
+  width: 100%;
+  margin-block: 0.5rem;
+  padding-block: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primer-font-color);
+  background-color: var(--primer-color);
+  border: 1px solid var(--primer-color);
+  border-radius: 100vmax;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  form {
+    max-width: 28%;
+    padding: 2rem 1.5rem;
+  }
+
+  .rating-option-btn {
+    width: 2.8rem;
+  }
+
+  .rating-option-btn:hover {
+    color: var(--primer-font-color);
+    background-color: var(--secondary-font-color);
+    border-color: var(--secondary-font-color);
+  }
+
+  .rating-option-btn:focus {
+    outline: 1px solid var(--primer-font-color);
+  }
+
+  .submit-btn:hover {
+    color: var(--primer-color);
+    background-color: var(--primer-font-color);
+    border-color: var(--primer-font-color);
+  }
+
+  .submit-btn:focus {
+    outline: 1px solid var(--primer-font-color);
+  }
+}
